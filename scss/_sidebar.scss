@@ -1,0 +1,30 @@
+/************** Sidebar Start **************/
+.sidebar {
+    &__section {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #b4b9bd;
+    }
+
+    &__section-title {
+        font-size: 22px;
+        color: #454f58;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: 3px;
+            a {
+                text-decoration: none;
+                color: #96a0aa;
+
+                &:hover {
+                    color: darken($color: #96a0aa, $amount: 10);
+                }
+            }
+        }
+    }
+}
+/************** Sidebar End **************/

@@ -1,0 +1,54 @@
+/************** Typography Start **************/
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 22px;
+}
+h4 {
+    font-size: 18x;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 14px;
+}
+p {
+    font-size: 15px;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+blockquote {
+    border-left: 3px solid #02b3e4;
+    padding: 20px;
+    background: #c8cdd2;
+    margin: 10px 0;
+}
+ul,
+ol {
+    padding-left: 20px;
+}
+.list-unstyled {
+    padding: 0;
+}
+
+a {
+    color: #017a9b;
+}
+
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+}
+/************** Typography End **************/

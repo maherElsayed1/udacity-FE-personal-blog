@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #e6e6e6;
+  color: #6d7780;
+  line-height: 1.6;
+}
+
+/************** Layout Start **************/
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 30px;
+  padding: 0 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-column: span 12;
+}
+
+.main {
+  grid-column: span 9;
+  max-width: 100%;
+}
+
+.main-post {
+  grid-column: span 12;
+}
+
+.sidebar {
+  grid-column: span 3;
+  max-width: 100%;
+}
+
+.footer {
+  grid-column: span 12;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    grid-gap: 0;
+  }
+  .header {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .main,
+  .main-post {
+    grid-column: span 12;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .sidebar {
+    grid-column: span 12;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .footer {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+/************** Layout End **************/
+/************** Typography Start **************/
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18x;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left: 3px solid #02b3e4;
+  padding: 20px;
+  background: #c8cdd2;
+  margin: 10px 0;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+.list-unstyled {
+  padding: 0;
+}
+
+a {
+  color: #017a9b;
+}
+
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/************** Typography End **************/
+/************** Header Start **************/
+.header {
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #b4b9bd;
+  margin-bottom: 30px;
+}
+
+.header__title a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 50px;
+  color: #014052;
+}
+
+.header__desc {
+  color: #014052;
+  font-size: 14px;
+}
+
+/************** Header End **************/
+/************** Post Start **************/
+.post {
+  border-bottom: 1px solid #b4b9bd;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+.post:last-child {
+  border-bottom: 0;
+}
+
+.post__img img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.post__img img:hover {
+  opacity: 0.9;
+}
+
+.post__title {
+  font-size: 30px;
+  color: #2e3d49;
+}
+
+.post__meta {
+  list-style: none;
+}
+
+.post__meta li {
+  display: inline-block;
+  color: #6d7780;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.post__meta li::after {
+  content: "|";
+  margin: 0 5px;
+}
+
+.post__meta li:last-child::after {
+  display: none;
+}
+
+.post__meta li a {
+  color: #6d7780;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.post p {
+  color: #6d7780;
+  line-height: 1.6;
+}
+
+.post__more {
+  background: #017a9b;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.post__more:hover {
+  background: #028bb1;
+}
+
+.main-post .post__img img {
+  height: auto;
+}
+
+.share-post {
+  margin-top: 40px;
+}
+
+.share-post__title {
+  margin-bottom: 5px;
+}
+
+.share-post ul {
+  padding: 0;
+}
+
+.share-post ul li {
+  display: inline-block;
+}
+
+.share-post ul li a {
+  border-radius: 3px;
+  background: #c8cdd2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #454f58;
+}
+
+/************** Post End **************/
+/************** Sidebar Start **************/
+.sidebar__section {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #b4b9bd;
+}
+
+.sidebar__section-title {
+  font-size: 22px;
+  color: #454f58;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 3px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #96a0aa;
+}
+
+.sidebar ul li a:hover {
+  color: #7a8793;
+}
+
+/************** Sidebar End **************/
+/************** Search Start **************/
+.search .seach-input {
+  display: block;
+  height: 40px;
+  width: 400px;
+  max-width: 100%;
+  padding: 5px 10px;
+  border: none;
+  background: #fff;
+}
+
+.search .seach-input:focus {
+  outline: none;
+}
+
+.search .seach-submit {
+  margin-top: 10px;
+  height: 40px;
+  padding: 5px 30px;
+  background: #c8cdd2;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.search .seach-submit:focus {
+  outline: none;
+}
+
+.search .seach-submit:hover {
+  background: #acb4bb;
+}
+
+/************** Search End **************/
+/************** Footer Start **************/
+.footer {
+  color: #6d7780;
+  padding: 30px 0;
+  border-top: 1px solid #b4b9bd;
+}
+
+.footer h6 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/************** Footer End **************/
+/*# sourceMappingURL=style.css.map */
